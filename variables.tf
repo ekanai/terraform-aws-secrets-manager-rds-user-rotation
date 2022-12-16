@@ -3,12 +3,12 @@ variable "secret_name" {
   description = "Secret Name"
 }
 
-variable "kms_arn" {
+variable "kms_key_arn" {
   type        = string
   description = "KMS Key ARN"
 }
 
-variable "cluster_name" {
+variable "aurora_cluster_name" {
   type        = string
   description = "RDS Cluster Name"
 }
