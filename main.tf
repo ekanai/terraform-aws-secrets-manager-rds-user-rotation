@@ -1,6 +1,6 @@
 resource "aws_secretsmanager_secret" "secret" {
   name       = var.secret_name
-  kms_key_id = var.kms_arn
+  kms_key_id = var.kms_key_arn
 
   tags = {
     username = var.user_name
@@ -9,7 +9,7 @@ resource "aws_secretsmanager_secret" "secret" {
 
 locals {
   json = {
-    dbClusterIdentifier = var.cluster_name
+    dbClusterIdentifier = var.aurora_cluster_name
     engine              = "mysql"
     host                = var.writer_endpoint
     password            = var.password
